@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+  }
+
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .music__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .music__card {
+    width: calc(33.333% - 2rem);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .music__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .music__card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .music__card h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .music__card {
+      width: 90%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .music__card {
+      width: 40%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .music__card {
+      width: calc(24% - 2rem);
+    }
+  }
